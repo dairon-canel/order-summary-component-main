@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+    :root {
+      /* Primary */
+      --pale-blue: hsl(225, 100%, 94%);
+      --bright-blue: hsl(245, 75%, 52%);
+
+      /* Neutral */
+      --desaturated-blue: hsl(224, 23%, 55%);
+      --very-pale-blue: hsl(225, 100%, 98%);
+      --dark-blue: hsl(223, 47%, 23%);
+
+      font-size: 14px;
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url("./images/pattern-background-desktop.svg");
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-color: var(--pale-blue);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .card {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 300px;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .card__title {
+      margin: 16px 0 8px;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--dark-blue);
+    }
+
+    .card__description {
+      color: var(--desaturated-blue);
+      line-height: 1.4rem;
+      font-size: .9rem;
+      width: 240px;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .music__plan {
+      margin: 0 20px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 240px;
+      border-radius: 8px;
+      background-color: var(--very-pale-blue);
+      margin-bottom: 12px;
+    }
+
+    .plan {
+      margin-left: 15px;
+    }
+    
+    .left__side {
+      display: flex;
+    }
+
+    .plan__title {
+      font-size: .9rem;
+      font-weight: 900;
+      color: var(--dark-blue);
+    }
+
+    .plan__cost {
+      color: var(--desaturated-blue);
+      font-weight: 500;
+      font-size: .9rem;
+    }
+
+    .change__button {
+      color: var(--bright-blue);
+      font-weight: 900;
+      text-decoration: underline;
+      font-size: .9rem;
+      transition: color .3s ease;
+    }
+
+    .change__button:hover {
+      cursor: pointer;
+      text-decoration: none;
+      color: hsl(228, 52%, 51%);
+    }
+
+    .payment__btn {
+      color: #fff;
+      background-color: var(--bright-blue);
+      border: none;
+      width: 240px;
+      font-size: .9rem;
+      font-weight: 700;
+      border-radius: 8px;
+      padding: 12px 0;
+      margin-bottom: 16px;
+      box-shadow: 0 5px 15px hsla(228, 61%, 46%, 0.606);
+      transition: background-color .3s ease;
+    }
+
+    .payment__btn:hover {
+      cursor: pointer;
+      text-decoration: none;
+      background-color: hsl(228, 52%, 51%);
+    }
+
+    .cancel__btn {
+      background-color: #fff;
+      border: none;
+      color: var(--desaturated-blue);
+      font-weight: 700;
+      margin-bottom: 24px;
+      transition: color .3s ease;
+    }
+
+    .cancel__btn:hover {
+      cursor: pointer;
+      color: var(--dark-blue);
+    }
+
+    .attribution { 
+      font-size: 11px; 
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+    }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media screen and (max-width: 500px) {
+      body {
+      background-image: url("./images/pattern-background-mobile.svg");
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <img src="./images/illustration-hero.svg" alt="hero" width="300">
+    <h1 class="card__title">Order Summary</h1>
+    <p class="card__description">You can now listen to millions of songs, audiobooks, and podcasts on any 
+  device anywhere you like!</p>
+    <div class="music__plan">
+      <div class="left__side">
+      <span class="music__img">
+        <img src="./images/icon-music.svg" alt="music" width="30">
+      </span>
+      <span class="plan">
+        <h3 class="plan__title">Annual Plan</h3>
+        <h4 class="plan__cost">$59.99/year</h4>
+      </span>
+      </div>
+      <span class="change__button">Change</span>
+    </div>
+    <button class="payment__btn">Proceed to Payment</button>
+    <button class="cancel__btn">Cancel Order</button>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://portfolio-daironcanel.netlify.app">Dairon Canel</a>.
+  </footer>
+</body>
+</html>
